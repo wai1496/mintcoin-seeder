@@ -339,7 +339,7 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"mintseed.keremhd.name.tr", ""};
+static const string mainnet_seeds[] = {"mintseed.keremhd.name.tr", "seed.mintcoinofficial.com", "mintseed.mintcoinfund.org", ""};
 static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
