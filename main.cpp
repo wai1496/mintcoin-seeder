@@ -143,7 +143,7 @@ extern "C" void* ThreadCrawler(void* data) {
       res.nClientV = 0;
       res.nHeight = 0;
       res.strClientV = "";
-      bool getaddr = res.ourLastSuccess + 604800 < now;
+      bool getaddr = res.ourLastSuccess + (60*60*1) < now;
       res.fGood = TestNode(res.service,res.nBanTime,res.nClientV,res.strClientV,res.nHeight,getaddr ? &addr : NULL);
     }
     db.ResultMany(ips);
@@ -339,7 +339,7 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"mintseed.keremhd.name.tr", ""};
+static const string mainnet_seeds[] = {"mintseed.keremhd.name.tr", "seed.mintcoinofficial.com", "mintseed.mintcoinfund.org", ""};
 static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
